@@ -82,6 +82,14 @@
   .sl-youtube{background:#ff0000;}
   .sl-instagram{background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);}
   .sl-facebook{background:#1877f2;}
+  .list-form{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 14px;}
+  .list-form input[type=email]{flex:1 1 240px; padding:11px 14px; font:inherit; font-size:1rem; color:#fff; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.25); border-radius:4px;}
+  .list-form input[type=email]::placeholder{color:rgba(255,255,255,0.45);}
+  .list-form button{padding:11px 20px; font:inherit; font-weight:700; font-size:0.9rem; letter-spacing:0.04em; color:#0e1410; background:var(--accent); border:0; border-radius:4px; cursor:pointer;}
+  .list-form button:hover{opacity:0.88;}
+  .list-note{font-size:0.85rem; color:rgba(255,255,255,0.5);}
+  .list-thanks{display:none; color:var(--text-strong);}
+  #list:target .list-thanks{display:block;}
   footer{
     margin-top:80px; padding-top:24px;
     border-top:1px solid rgba(255,255,255,0.15);
@@ -105,7 +113,7 @@
 
   <div class="release">
     <p><b>Whatever Lovely Is</b> (2026) — out 1 October, under the band name Weston Popławski Knade Mazzoll. With G. Calvin Weston (drums — Ornette Coleman's Prime Time, Bill Laswell, James Blood Ulmer), Jerzy Mazzoll (clarinet, bass clarinet) and Waldemar Knade (viola, organ). I arranged and produced the record, and play electric and fretless bass, violin, keys and programming.</p>
-    <p>First broadcast — "Anna's Rope" on <a href="https://www.fbi.radio/programs/utility-fog-with-peter-hollo/episodes/utility-fog-with-peter-hollo-27th-september-2026" target="_blank" rel="noopener">Utility Fog, FBi Radio Sydney</a>, 27 September 2026.</p>
+    <p>First broadcast — "Anna's Rope" on <a href="https://www.fbi.radio/programs/utility-fog-with-peter-hollo/episodes/utility-fog-with-peter-hollo-27th-september-2026" target="_blank" rel="noopener">Utility Fog, FBi Radio Sydney</a>, 27 September 2026. <a href="#list">Get the next ones by email</a>.</p>
     <p><a href="https://drive.proton.me/urls/GXR4SNPGS4#lxfWk03faErC" target="_blank" rel="noopener">Whatever Lovely Is – Teaser</a></p>
   </div>
 
@@ -147,6 +155,19 @@
   <h2>Background</h2>
   <p>Multi-instrumentalist — violin, electric and fretless bass, keys and programming, guitar. Formal violin training at PSM im. K. Lipińskiego, Lublin. Twenty years of recording and stage work across Polish independent music.</p>
   <p>Active member of Polish art-rock band Amarok (<a href="https://amarok.pl" target="_blank" rel="noopener">amarok.pl</a>). My compositional contributions to Amarok's <i>Hope</i> (2024) — Welcome (cold-wave), Queen (trip-hop), Stay Human and Hope Is — point to the same territory as my solo work. Bass and violin throughout. Violin on Michał Wojtas' <i>Lore</i> (2023). International live history with Amarok includes Night of the Prog (Loreley), Midsummer Prog (Netherlands), Crescendo (French Guiana) and Untold (Romania).</p>
+
+  <h2 id="list">Letters</h2>
+  <p>A few emails a year, only when something is really happening: a new record, a broadcast, a concert, a vinyl pressing before it goes anywhere else. <i>ajar</i> comes next, and people on this list will hear it first.</p>
+  <p class="list-thanks">Thank you. You're on the list.</p>
+  <form class="list-form" action="https://formsubmit.co/kornel@kornelpoplawski.com" method="POST">
+    <input type="email" name="email" placeholder="your@email" required aria-label="Your email">
+    <input type="hidden" name="_subject" value="New subscriber: kornelpoplawski.com">
+    <input type="hidden" name="_next" value="https://kornelpoplawski.com/#list">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <button type="submit">Join</button>
+  </form>
+  <p class="list-note">No spam, no selling your address. Unsubscribe with one reply. You can also <a href="https://kornelpoplawski.bandcamp.com/" target="_blank" rel="noopener">follow me on Bandcamp</a> to be notified of every release.</p>
 
   <h2>Let's talk</h2>
   <p>Send me your material. I'll listen and tell you honestly whether — and how — I can help.</p>
