@@ -5,103 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kornel Popławski | Composer · Producer · Arranger</title>
 <meta name="description" content="Kornel Popławski — composer, producer and arranger working between chamber music, free improvisation and field recording. Warsaw.">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon-48x48.png" sizes="48x48">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0e1410;
-    --text:rgba(255,255,255,0.72);
-    --text-strong:#ffffff;
-    --accent:rgba(250,255,0,0.85);
-    --max:760px;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      linear-gradient(180deg, rgba(6,10,8,0.55), rgba(6,10,8,0.8)),
-      url('hero.jpg') center top / cover no-repeat fixed,
-      #0e1410;
-    color:var(--text);
-    font-family:'Lato', sans-serif;
-    font-weight:300;
-    line-height:1.6;
-    font-size:17px;
-  }
-  .wrap{max-width:var(--max); margin:0 auto; padding:64px 24px 96px;}
-  .avatar{
-    width:110px; height:110px; border-radius:50%;
-    object-fit:cover;
-    border:1px solid rgba(255,255,255,0.25);
-    margin-bottom:28px;
-    display:block;
-  }
-  h1{
-    font-weight:400; font-size:2.6rem; color:var(--text-strong);
-    margin:0 0 18px;
-  }
-  h2{
-    font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
-    font-size:0.95rem; color:var(--text-strong);
-    margin:56px 0 18px;
-  }
-  .tagline{color:var(--text-strong); opacity:0.9; margin-bottom:22px;}
-  p{margin:0 0 18px;}
-  a{color:var(--accent); text-decoration:underline; text-underline-offset:2px;}
-  a:hover{opacity:0.85;}
-  .release{margin-bottom:26px;}
-  .release b{color:var(--text-strong); font-weight:700;}
-  ul.plain{list-style:none; padding:0; margin:0;}
-  ul.plain li{margin-bottom:8px;}
-  .socials{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;}
-  .social-link{
-    width:42px; height:42px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    color:#fff;
-    text-decoration:none;
-    box-shadow:0 0 0 1px rgba(255,255,255,0.12);
-    transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
-  }
-  .social-link svg{width:19px; height:19px; fill:currentColor; display:block;}
-  .social-link:hover{
-    transform:translateY(-2px);
-    box-shadow:0 0 0 1px rgba(255,255,255,0.35);
-    opacity:0.92;
-  }
-  .sl-mail{background:#4b5563;}
-  .sl-bandcamp{background:#1da0c3;}
-  .sl-spotify{background:#1db954;}
-  .sl-youtube{background:#ff0000;}
-  .sl-instagram{background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);}
-  .sl-facebook{background:#1877f2;}
-  .list-form{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 14px;}
-  .list-form input[type=email]{flex:1 1 240px; padding:11px 14px; font:inherit; font-size:1rem; color:#fff; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.25); border-radius:4px;}
-  .list-form input[type=email]::placeholder{color:rgba(255,255,255,0.45);}
-  .list-form button{padding:11px 20px; font:inherit; font-weight:700; font-size:0.9rem; letter-spacing:0.04em; color:#0e1410; background:var(--accent); border:0; border-radius:4px; cursor:pointer;}
-  .list-form button:hover{opacity:0.88;}
-  .list-note{font-size:0.85rem; color:rgba(255,255,255,0.5);}
-  .list-thanks{display:none; color:var(--text-strong);}
-  #list:target .list-thanks{display:block;}
-  footer{
-    margin-top:80px; padding-top:24px;
-    border-top:1px solid rgba(255,255,255,0.15);
-    font-size:0.85rem; color:rgba(255,255,255,0.45);
-  }
-  footer a{color:rgba(255,255,255,0.55);}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="wrap">
 
-  <img class="avatar" src="profile.jpg" alt="Kornel Popławski">
+  <nav class="top">
+    <a href="/" class="on">Home</a>
+    <a href="/records/">Records</a>
+    <a href="/press/">Press</a>
+    <a href="/work/">Film &amp; Production</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <img class="avatar" src="/profile.jpg" alt="Kornel Popławski">
 
   <h1>Kornel Popławski</h1>
   <p class="tagline">Composer · Producer · Arranger — Warsaw</p>
@@ -109,53 +36,9 @@
   <p>Composer working between chamber music, free improvisation, and field recording.</p>
   <p>Partly tonal, partly atonal string trios and quartets. Modal piano. Live drum kit and cymbal textures. Field recordings of crowds, halls, factories and birdsong assembled into the score itself. Warm Moog or viola surfacing through the texture. Slow rock chords with deep rhythm sections when a piece needs them. Reference points: Bill Laswell, John Zorn's Filmworks and Bar Kokhba projects, Oliver Coates, Supersilent, David Sylvian's Blemish / Manafon collaborators, Marc Ribot's Ceramic Dog, and the experimental wing of ECM.</p>
 
-  <h2>Records</h2>
-
-  <div class="release">
-    <p><b>Whatever Lovely Is</b> (2026) — out 1 October, under the band name Weston Popławski Knade Mazzoll. With G. Calvin Weston (drums — Ornette Coleman's Prime Time, Bill Laswell, James Blood Ulmer), Jerzy Mazzoll (clarinet, bass clarinet) and Waldemar Knade (viola, organ). I arranged and produced the record, and play electric and fretless bass, violin, keys and programming.</p>
-    <p>First broadcast — "Anna's Rope" on <a href="https://www.fbi.radio/programs/utility-fog-with-peter-hollo/episodes/utility-fog-with-peter-hollo-27th-september-2026" target="_blank" rel="noopener">Utility Fog, FBi Radio Sydney</a>, 27 September 2026. <a href="#list">Get the next ones by email</a>.</p>
-    <p><a href="https://drive.proton.me/urls/GXR4SNPGS4#lxfWk03faErC" target="_blank" rel="noopener">Whatever Lovely Is – Teaser</a></p>
-  </div>
-
-  <div class="release">
-    <p><b>The Way (Instrumentals)</b> (July 2026) — digital. Instrumental edition of The Way. Chamber strings, keys and programming, bass, guitar, drums, composed space.</p>
-  </div>
-
-  <div class="release">
-    <p><b>The Way</b> (2025) — LP, vinyl. Solo: written, played, produced and mixed. Chamber writing, free improvisation, composed space, voice.</p>
-    <p><a href="https://kornelpoplawski.bandcamp.com/album/the-way" target="_blank" rel="noopener">The Way — Bandcamp</a></p>
-  </div>
-
-  <div class="release">
-    <p><b>Tribute to Polish Sonorism</b> (2020) — composer grant from the Polish Ministry of Culture (MKiDN). Three electronic pieces built on sampled voices of Penderecki, Kilar and Lutosławski — a conceptual gesture toward the Polish avant-garde tradition rather than a continuation of its compositional language.</p>
-    <p><a href="https://kornelpoplawski.bandcamp.com/album/tribute-to-polish-sonorism" target="_blank" rel="noopener">Tribute to Polish Sonorism — Bandcamp</a></p>
-  </div>
-
-  <div class="release">
-    <p><b>Wentylator</b> (2020) — self-released, thirteen pieces. First solo album; early version of the chamber writing + improvisation + field-recording approach.</p>
-    <p><a href="https://kornelpoplawski.bandcamp.com/album/wentylator" target="_blank" rel="noopener">Wentylator — Bandcamp</a></p>
-  </div>
-
-  <h2>Film, Scoring &amp; Sync</h2>
-  <p>I write music for film, documentary, dance, theatre and installation. Chamber strings, modal piano, field recording, free-improv tones, electronics. Contributed one composition, bass, additional instruments and mixing to Wojciech Smarzowski's <i>Wesele</i> (2004) — soundtrack composed by Tymon Tymański &amp; The Transistors (Polish Academy Award for Best Original Music, 2005).</p>
-  <ul class="plain">
-    <li>— Original score for film, documentary, dance, theatre, installation</li>
-    <li>— Sync from existing solo catalog (clean rights)</li>
-    <li>— Custom cues and commissions</li>
-  </ul>
-
-  <h2>Production</h2>
-  <p>I produce records for artists whose music doesn't fit on one shelf — where a song can suddenly stop being a song, then become one again. If that's the record you want to make, we should talk.</p>
-  <ul class="plain">
-    <li>— Full album production: concept → final master</li>
-    <li>— Arrangement &amp; composition development</li>
-    <li>— Remote or in-studio (Warsaw); on-site sessions — I can travel to you</li>
-  </ul>
-  <p><b>Let's talk.</b> <a href="mailto:kornel@kornelpoplawski.com">Send me your material</a>. I'll listen and tell you honestly whether — and how — I can help.</p>
-
-  <h2>Background</h2>
-  <p>Multi-instrumentalist — violin, electric and fretless bass, keys and programming, guitar. Formal violin training at PSM im. K. Lipińskiego, Lublin. Twenty years of recording and stage work across Polish independent music.</p>
-  <p>Active member of Polish art-rock band Amarok (<a href="https://amarok.pl" target="_blank" rel="noopener">amarok.pl</a>). My compositional contributions to Amarok's <i>Hope</i> (2024) — Welcome (cold-wave), Queen (trip-hop), Stay Human and Hope Is — point to the same territory as my solo work. Bass and violin throughout. Violin on Michał Wojtas' <i>Lore</i> (2023). International live history with Amarok includes Night of the Prog (Loreley), Midsummer Prog (Netherlands), Crescendo (French Guiana) and Untold (Romania).</p>
+  <h2>Now</h2>
+  <p><b>Whatever Lovely Is</b> — out 1 October 2026. First broadcast: "Anna's Rope" on Utility Fog, FBi Radio Sydney. <a href="/records/">Records</a> · <a href="/press/">Press</a></p>
+  <p><i>ajar</i> — new solo album, coming next.</p>
 
   <h2 id="list">Letters</h2>
   <p>A few emails a year, only when something is really happening: a new record, a broadcast, a concert, a vinyl pressing before it goes anywhere else. <i>ajar</i> comes next, and people on this list will hear it first.</p>
@@ -171,6 +54,7 @@
   <p class="list-note">No spam, no selling your address. Unsubscribe with one reply. You can also <a href="https://kornelpoplawski.bandcamp.com/" target="_blank" rel="noopener">follow me on Bandcamp</a> to be notified of every release.</p>
 
 
+  <h2>Contact</h2>
   <div class="socials">
     <a class="social-link sl-mail" href="mailto:kornel@kornelpoplawski.com" title="Email" aria-label="Email">
       <svg viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-10 6.5L2 8V6l10 6.5L22 6v2z"/></svg>
