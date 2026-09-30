@@ -43,14 +43,32 @@
   <h2 id="list">Letters</h2>
   <p>A few emails a year, only when something is really happening: a new record, a broadcast, a concert, a vinyl pressing before it goes anywhere else. <i>ajar</i> comes next, and people on this list will hear it first.</p>
   <p class="list-thanks">Thank you. You're on the list.</p>
-  <form class="list-form" action="https://formsubmit.co/kornel@kornelpoplawski.com" method="POST">
+  <form class="list-form" id="list-form" action="https://api.web3forms.com/submit" method="POST">
     <input type="email" name="email" placeholder="your@email" required aria-label="Your email">
-    <input type="hidden" name="_subject" value="New subscriber: kornelpoplawski.com">
-    <input type="hidden" name="_next" value="https://kornelpoplawski.com/#list">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="access_key" value="9c1055d0-10a6-422b-9b59-b57c947f5029">
+    <input type="hidden" name="subject" value="New subscriber: kornelpoplawski.com">
+    <input type="hidden" name="from_name" value="kornelpoplawski.com mailing list">
+    <input type="hidden" name="redirect" value="https://kornelpoplawski.com/#list">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
     <button type="submit">Join</button>
   </form>
+  <script>
+  (function(){
+    var f=document.getElementById('list-form'); if(!f||!window.fetch) return;
+    var b=f.querySelector('button'), label=b.textContent;
+    var thanks=document.querySelector('.list-thanks');
+    f.addEventListener('submit',function(e){
+      e.preventDefault(); b.disabled=true; b.textContent='...';
+      fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d&&d.success){ f.style.display='none'; if(thanks){thanks.style.display='block';} }
+          else { throw new Error('fail'); }
+        })
+        .catch(function(){ b.disabled=false; b.textContent=label; alert('Something went wrong. Please try again, or write to kornel@kornelpoplawski.com.'); });
+    });
+  })();
+  </script>
   <p class="list-note">No spam, no selling your address. Unsubscribe with one reply. You can also <a href="https://kornelpoplawski.bandcamp.com/" target="_blank" rel="noopener">follow me on Bandcamp</a> to be notified of every release.</p>
 
 
