@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsubscribe | Kornel Popławski</title>
+<meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="top">
+    <a href="/">Home</a>
+    <a href="/records/">Records</a>
+    <a href="/press/">Press</a>
+    <a href="/work/">Film &amp; Production</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <h1>Unsubscribe</h1>
+
+  <div id="unsub-ask">
+    <p>Want to step off the list? No hard feelings. Confirm below and I'll remove your address.</p>
+    <form class="list-form" id="unsub-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="email" name="email" id="unsub-email" placeholder="your@email" required aria-label="Your email">
+      <input type="hidden" name="access_key" value="9c1055d0-10a6-422b-9b59-b57c947f5029">
+      <input type="hidden" name="subject" value="UNSUBSCRIBE: kornelpoplawski.com">
+      <input type="hidden" name="from_name" value="kornelpoplawski.com mailing list">
+      <input type="hidden" name="message" value="Please remove this address from the mailing list.">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Unsubscribe</button>
+    </form>
+  </div>
+
+  <p id="unsub-done" style="display:none">Done. You won't get any more emails from this list. Thank you for having been on it.</p>
+
+  <script>
+  (function(){
+    var f=document.getElementById('unsub-form'), e=document.getElementById('unsub-email');
+    var m=location.search.match(/[?&]e=([^&]+)/);
+    if(m){ try{ e.value=decodeURIComponent(m[1]); }catch(x){} }
+    var b=f.querySelector('button'), label=b.textContent;
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault(); b.disabled=true; b.textContent='...';
+      fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d&&d.success){ document.getElementById('unsub-ask').style.display='none'; document.getElementById('unsub-done').style.display='block'; }
+          else { throw new Error('fail'); }
+        })
+        .catch(function(){ b.disabled=false; b.textContent=label; alert('Something went wrong. Please reply to my email with "unsubscribe" instead.'); });
+    });
+  })();
+  </script>
+
+  <footer>
+    © Kornel Popławski 2026
+  </footer>
+
+</div>
+</body>
+</html>
