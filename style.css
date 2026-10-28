@@ -64,6 +64,7 @@ ul.plain li{margin-bottom:8px;}
 .sl-youtube{background:#ff0000;}
 .sl-instagram{background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);}
 .sl-facebook{background:#1877f2;}
+.sl-substack{background:#ff6719;}
 .list-form{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 14px;}
 .list-form input[type=email]{flex:1 1 240px; padding:11px 14px; font:inherit; font-size:1rem; color:#fff; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.25); border-radius:4px;}
 .list-form input[type=email]::placeholder{color:rgba(255,255,255,0.45);}
